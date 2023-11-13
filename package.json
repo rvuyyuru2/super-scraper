@@ -1,6 +1,6 @@
 {
   "name": "super-scraper",
-  "version": "16.8.1",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": "bin.js",
@@ -15,18 +15,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/christian-fei/mega-scraper.git"
+    "url": "git+https://github.com/rvuyyuru2/super-scraper.git"
   },
   "directories": {
     "lib": "./lib"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "scrapper",
+    "crawl",
+    "puppeteer",
+    "proxy"
+  ],
+  "author": "rvuyyuru1",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/christian-fei/mega-scraper/issues"
+    "url": "https://github.com/rvuyyuru2/super-scraper/issues"
   },
-  "homepage": "https://github.com/christian-fei/mega-scraper#readme",
+  "homepage": "https://github.com/rvuyyuru2/super-scraper#readme",
   "devDependencies": {
     "@types/bull": "^3.12.1",
     "ava": "^3.5.0"
