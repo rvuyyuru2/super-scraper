@@ -1,18 +1,25 @@
-const { browser: { createBrowser } } = require('.')
+const {
+  browser: { createBrowser },
+} = require(".");
 
-;(async () => {
-  const browser = await createBrowser({ proxy: true })
+(async () => {
+  const browser = await createBrowser();
+  console.log(browser);
+  const page = await browser.newPage();
+  await page.goto(
+    "https://www.sfchronicle.com/sports/michaelsilver/article/49ers-defense-dominated-jaguars-regained-mojo-18486716.php"
+  );
+  await page.goto(url, {
+    waitUntil: "networkidle2",
+    timeout: 60000,
+  });
+  const content = await page.content();
 
-  const page = await browser.newPage()
-  await page.goto('https://ipinfo.io/json')
-  const content = await page.content()
-  const serialized = content.substring(content.indexOf('{'), content.indexOf('}') + 1)
+  console.log(content);
 
-  console.log(JSON.parse(serialized))
+  await page.waitFor(1000);
+  await page.close();
+  await browser.close();
 
-  await page.waitFor(1000)
-  await page.close()
-  await browser.close()
-
-  process.exit(0)
-})()
+  process.exit(0);
+})();
